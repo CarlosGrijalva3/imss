@@ -1,0 +1,75 @@
+<?php require 'controlador.php'; ?>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>Formulario SAT</title>
+    </head>
+
+<body>
+    <h1>Formulario imss</h1>
+    <form action="controlador.php" method="post" id="contact_form" class="declara">
+        <ul>
+              <!--n-derecho ambiente-->
+            <!--<li><span class="required notification">N.Dereho ambiente</span></li>-->
+
+            <!--N.Dereho ambiente--->
+            <li> 
+                <label for="rfc">N.Dereho ambiente</label><input type="text" name="nu_der_hab" pattern="[a-zA-Z0-9]+" placeholder="11 caracteres" minlength="11" maxlength="11" required>
+            </li>
+
+            <!--nombre-->
+            <li>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" maxlength="15" placeholder="Nombre" required>
+            </li>
+
+            <!--apellido-->
+            <li>
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellidos" maxlength="20" placeholder="Apellido" required>
+            </li>
+    
+             <!--tipo sangre-->
+             <li>
+                <label for="tipo_sangre">Tipo de Sangre:</label>
+                <input type="text" name="t_sangre" id="tipo_sangre" pattern="[ABOab][+-]" maxlength="2" placeholder="Ejemplo: A-" required>
+             </li>
+          
+
+
+            <!--edad-->
+             <li>
+                <label for="telefono">Edad</label>
+                <input type="tel" name="edad" placeholder="edad" pattern="[0-9]+" maxlength="3" required>
+            </li>
+
+            <!--especialidad-->
+            <li> 
+                <label for="especialidad">Especialidad</label> <input type="text" name="especialidad" placeholder="profesion" pattern="[a-z A-Z 0-9]+" placeholder="" minlength="1" maxlength="60" required pattern="+-">
+            </li>
+     
+            <!------------telefono-------------->
+
+            <!--lada-->
+            <li>
+                <label for="lada">Lada</label>
+                <input type="tel" name="clave_lada" placeholder="656" min="0" max="9"  minlength="3" maxlength="3" required>
+            </li>
+            
+            <!--telefono-->
+            <li>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="numero" placeholder="Formato: 123-456-7890" min="0" max="9"  maxlength="10" required>
+            </li>
+
+            <li>
+                <button class="submit" type="submit" name="registro">Enviar</button>
+            </li>
+        </ul>
+    </form>
+
+</body>
+</html>
